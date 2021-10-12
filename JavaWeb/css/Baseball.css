@@ -1,0 +1,31 @@
+body {
+    background-color: rgba(206, 182, 182, 0.637);
+}
+
+h1 {
+    position: absolute;
+    left: 53%;
+    top: 32.5%;
+    transform: translate(-50%, -50%);
+}
+
+.paragrath {
+    width: 320px;
+    position: absolute;
+    left: 60%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+}
+
+.para {
+    text-indent: 2em;
+}
+
+video {
+    width: 310.5px;
+    height: 552px;
+    position: absolute;
+    left: 40%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,48 @@
+body {
+    background-color: rgba(206, 182, 182, 0.637);
+}
+
+h1 {
+    position: absolute;
+    left: 25%;
+    top: 16%;
+    transform: translate(-50%, -50%);
+}
+
+.paragrath {
+    width: 946px;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -40%);
+}
+
+.para {
+    text-indent: 2em;
+}
+
+video {
+    width: 310.5px;
+    height: 552px;
+}
+
+#surfing-1 {
+    position: absolute;
+    left: 32%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+}
+
+#surfing-2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+}
+
+#surfing-3 {
+    position: absolute;
+    left: 68%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+}

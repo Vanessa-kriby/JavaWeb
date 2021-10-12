@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Tennis.css">
+    <title>Tennis</title>
+</head>
+
+<body>
+    <div class="Tennis">
+        <h1>网球</h1>
+        <div class="paragrath">
+            <div class="para" id="para-1">网球（Tennis），是球类运动项目之一。有效网球运动场地是一个长方形，长为23.77米，单打场地宽为8.23米，双打场地宽为10.97米。中间隔有网，比赛双方各占球场的一方，球员用网球拍击球。</div>
+            <div class="para" id="para-2">网球运动孕育在法国，诞生在英国，普及和形成的高潮在美国。其最早起源于12-13世纪的法国。1896年在雅典举行的第一届现代奥运会上，网球的男子单打与双打被列为正式比赛，后来，由于国际奥委会和国际网球联合会在“业余运动员”问题上有分歧，已经连续进行了7届的奥运会网球比赛项目被取消。直到1984年的洛杉矶奥运会上，网球才被列为奥运项目。1988年在汉城奥运会上，网球重新被列为正式比赛项目。</div>
+            <div class="para" id="para-3">网球最高级的组织机构为国际网球联合会，1913年在法国巴黎成立。中国的最高级组织机构为中国网球协会。1953年在北京成立。</div>
+        </div>
+    </div>
+    <div class="shell">
+        <ul class="images">
+            <li class="img"></li>
+            <li class="img"></li>
+            <li class="img"></li>
+            <li class="img"></li>
+            <li class="img"></li>
+        </ul>
+        <ul class="min-images">
+            <li class="min"></li>
+            <li class="min"></li>
+            <li class="min"></li>
+            <li class="min"></li>
+            <li class="min"></li>
+        </ul>
+        <div class="button">
+            <div class="button-left">
+                <</div>
+                    <div class="button-right">></div>
+            </div>
+        </div>
+        <script>
+            let left = document.querySelector('.button-left')
+            let right = document.querySelector('.button-right')
+            let min = document.querySelectorAll('.min')
+            let images = document.querySelector('.images')
+
+            let index = 0
+            let time
+
+            function position() {
+                images.style.left = (index * -100) + "%"
+            }
+
+            function add() {
+                if (index >= min.length - 1) {
+                    index = 0
+                } else {
+                    index++
+                }
+            }
+
+            function desc() {
+                if (index < 1) {
+                    index = min.length - 1
+                } else {
+                    index--
+                }
+            }
+
+            function timer() {
+                time = setInterval(() => {
+                    index++
+                    desc()
+                    add()
+                    position()
+                }, 3000)
+            }
+            left.addEventListener('click', () => {
+                desc()
+                position()
+                clearInterval(time)
+                timer()
+            })
+            right.addEventListener('click', () => {
+                add()
+                position()
+                clearInterval(time)
+                timer()
+            })
+            for (let i = 0; i < min.length; i++) {
+                min[i].addEventListener('click', () => {
+                    index = i
+                    position()
+                    clearInterval(time)
+                    timer()
+                })
+            }
+            timer()
+        </script>
+</body>
+
+</html>

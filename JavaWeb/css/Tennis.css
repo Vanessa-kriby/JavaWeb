@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    bottom: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgba(206, 182, 182, 0.637);
+}
+
+h1 {
+    position: absolute;
+    left: 53%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.paragrath {
+    width: 320px;
+    position: absolute;
+    left: 60%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+}
+
+.para {
+    text-indent: 2em;
+}
+
+.shell {
+    width: 432px;
+    height: 576px;
+    position: absolute;
+    overflow-x: hidden;
+    border-radius: 5px;
+    box-shadow: 20px 30px 20px rgba(0, 0, 0, .5);
+    left: 37.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.images {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: .2s;
+}
+
+.img {
+    width: 100%;
+    background-size: cover;
+}
+
+.img:nth-child(1) {
+    background-image: url("/img/Tennis-1.png");
+}
+
+.img:nth-child(2) {
+    background-image: url("/img/Tennis-2.png");
+}
+
+.img:nth-child(3) {
+    background-image: url("/img/Tennis-3.png");
+}
+
+.img:nth-child(4) {
+    background-image: url("/img/Tennis-4.png");
+}
+
+.img:nth-child(5) {
+    background-image: url("/img/Tennis-5.png");
+}
+
+.min-images {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 20px;
+    width: 40%;
+    z-index: 999;
+    right: 10%;
+}
+
+.min {
+    width: 30px;
+    height: 30px;
+    /* 鼠标悬浮时显示按钮指针 */
+    cursor: pointer;
+    border-radius: 50%;
+    background-size: cover;
+    /* 照片偏移量 */
+    background-position: 0px 0;
+}
+
+.min:nth-child(1) {
+    background-image: url("/img/Tennis-1.png");
+}
+
+.min:nth-child(2) {
+    background-image: url("/img/Tennis-2.png");
+}
+
+.min:nth-child(3) {
+    background-image: url("/img/Tennis-3.png");
+}
+
+.min:nth-child(4) {
+    background-image: url("/img/Tennis-4.png");
+}
+
+.min:nth-child(5) {
+    background-image: url("/img/Tennis-5.png");
+}
+
+
+/* .button {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+} */
+
+
+/* .button-left,
+.button-right {
+    font-size: 50px;
+    background-color: rgba(160, 190, 255, 0.7);
+    padding: 0 20px;
+    line-height: 500px;
+    cursor: pointer;
+} */

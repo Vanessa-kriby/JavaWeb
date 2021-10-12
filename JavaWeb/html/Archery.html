@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/Archery.css">
+    <title>Archery</title>
+</head>
+
+<body>
+
+    <div class="a">
+        <div class="Archery">
+            <h1>射箭</h1>
+            <div class="paragrath">
+                <div class="para" id="para-1">射箭，即箭术（Archery），是指借助弓的弹力将箭射出，在一定的距离内比赛精准度的体育运动，别称射箭运动。</div>
+                <div class="para" id="para-2">射箭最初用于打猎和战争，现代射箭运动最早开始于英国，英格兰约克郡自1673年起举行方斯科顿银箭赛。1844年，第1届全英射箭锦标赛在英国举办。1861年英国射箭协会成立，统一竞赛规程。1900年，第2届奥运会射箭就被列为正式比赛项目，1956年中国开始将射箭列为比赛项目。</div>
+                <div class="para" id="para-3">射箭的最高组织机构为国际射箭联合会，简称国际箭联，于1931年成立，总部设在瑞士洛桑。</div>
+            </div>
+        </div>
+        <div class="b"></div>
+        <div class="c">
+            <div class="d dd"><img src="/img/Archery-1.jpg" alt=""></div>
+            <div class="d"><img src="/img/Archery-2.jpg" alt=""></div>
+            <div class="d"><img src="/img/Archery-3.jpg" alt=""></div>
+            <div class="d"><img src="/img/Archery-4.jpg" alt=""></div>
+            <div class="d"><img src="/img/Archery-5.jpg" alt=""></div>
+        </div>
+    </div>
+</body>
+<script>
+    // 获取左边大图的元素
+    let b = document.querySelector(".b")
+        // 获取右边小图的所有元素
+    let d = document.getElementsByClassName("d")
+
+    let time
+    let index = 0
+
+    // 设置一个重置函数
+    let a = function() {
+            for (let i = 0; i < d.length; i++) {
+                d[i].className = "d"
+            }
+        }
+        // 设置一个选中函数
+    let aa = function() {
+            // 先代入重置函数
+            a()
+            d[index].className = "d dd"
+        }
+        // 设置启动轮播图的时间函数
+    function ts() {
+        time = setInterval(function() {
+            aa()
+            index++
+            b.style.backgroundImage = "url('/img/Archery-" + [index] + ".jpg')"
+            if (index == 5) {
+                index = 0
+            }
+        }, 1500);
+    }
+    for (let i = 0; i < d.length; i++) {
+        // 鼠标移动到当前小图片上时触发
+        d[i].onmousemove = function() {
+            // 鼠标移动到当前小图片时右边大图片变成当前的小图片
+            b.style.backgroundImage = "url('/img/Archery-" + [i + 1] + ".jpg')"
+                // 鼠标移动到小图片上面时关闭定时器并重置定时，
+                // 鼠标移开后再继续执行
+            a()
+            clearInterval(time)
+            index = i + 1
+            ts()
+        }
+    }
+    // 执行轮播图
+    ts()
+</script>
+
+</html>

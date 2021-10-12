@@ -1,0 +1,41 @@
+body {
+    background-color: rgba(206, 182, 182, 0.637);
+}
+
+h1 {
+    position: absolute;
+    left: 43%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.paragrath {
+    width: 310.5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.para {
+    text-indent: 2em;
+}
+
+video {
+    width: 310.5px;
+    height: 552px;
+}
+
+#skiing-1 {
+    position: absolute;
+    left: 32%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+}
+
+#skiing-2 {
+    position: absolute;
+    left: 68%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+}
